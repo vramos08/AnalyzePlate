@@ -2,9 +2,9 @@ function plate = initializePlate(n);
 %making an array out of n and setting them to 25
 plate = 25*ones(n,n);
 
-% checking the size of the plate input, if it is one or zero 
+% checking the size of the plate input if it is one or zero 
 % throw an error message
-% then make the top be 100, bottom 50, left 0, abd right 75
+% then make the top 100, bottom 50, left 0, and right 75
 if n<2
     msg = 'Input a higher number.';
     error(msg)
@@ -16,13 +16,13 @@ else if n==2            %this will make each side have a different value
 else
     for i=1:n
         for j=1:n 
-            if i==1                 %top boarder
+            if i==1                 %top border
                 plate(i,j) = 100;
-            else if j==n            %right boarder
+            else if j==n            %right border
                     plate(i,j) = 75;
-            else if i==n            %bottom boarder
+            else if i==n            %bottom border
                     plate(i,j) = 50;
-            else if j==1            %left boarder
+            else if j==1            %left border
                     plate(i,j) = 0;
             end
             end
@@ -33,10 +33,10 @@ else
 end
 end
 
-%this part of the code takes the average of the adjacent points for the
+% This part of the code takes the average of the adjacent points for the
 %four corners. This will be done by checking if the loop is at a corner and
 %and getting the values of the corners near it. 
-%doesnt work for 2 will need its own statement becuase it will update the
+%doesnt work for 2 will need its own statement because it will update the
 %corners creating an odd average. This way it will have its own average
 %with the corners taken into account
 if n == 2         

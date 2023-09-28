@@ -1,7 +1,7 @@
 function [avgTemp, maxChangePoint] = analyzePlate(initialPlate, plate);
 %{
 This calculates the average temperature of the plate. The function also
-ifentifies the index of the point with the highest temperature change
+identifies the index of the point with the highest temperature change
 between the first and last iteration. To do this, I will be comparing the
 absolute difference between the two plates and keeping track of the max
 value. 
@@ -18,13 +18,13 @@ for i=1:rowNum
 end
 avgTemp = total/(rowNum*colNum);
 
-%now I will be finding maximum change point by saving the maximum
+%now I will be finding the maximum change point by saving the maximum
 %difference and keeping track of the point.
 maxDiff = 0;
 saveI=0;
 saveJ=0;
 
-%this loop check the absolute difference and saves the currentDifference as
+% This loop check the absolute difference and saves the currentDifference as
 %the max difference if it is bigger than the current maxDifference. This
 %keeps track of the first biggest difference.
 for i=1:rowNum

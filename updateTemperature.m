@@ -1,12 +1,12 @@
 function updatedPlate = updateTemperature(plate);
 %{
-This funtion will  accept the current temperature matrix as an input. It
-will find the average of the current (yet-to-be updated) temperatures of
+This function will  accept the current temperature matrix as an input. It
+will find the average of the current (yet-to-be-updated) temperatures of
 its four neighboring points. This will be done by having a copy of the
 array with the same boundary points. It will update the copy matrix as the loop
-continues and averaging the points of the original matrix. 
+continues and average the points of the original matrix. 
 %}
-%creating the copy matrix, since it is a nxn matrix, we will only get the
+%creating the copy array since it is a nxn matrix, we will only get the
 %rowindex as the main value. However, if this is used on an array that is
 %not nxn then throw an error function daying that it needs to be the same
 [rowNum, colNum] = size(plate);
